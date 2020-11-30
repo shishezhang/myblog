@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,height=device-height, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+    <title>画廊</title>
+    <link rel="icon" href="./img/favicon2.ico">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+	<![endif]-->
+
+    <link rel="stylesheet" href="./css/content.css">
+    <!-- 看板娘css -->
+    <link rel="stylesheet" type="text/css" href="./modules/live2d/waifu.css" />
+
+
+    <style>
+        /* 防止瀑布流切换出现 x轴 页面产生抖动 */
+        body{
+            overflow-x: hidden;
+        }
+        /* 图片三列 */
+        .col-3 {
+            width: 33.3%;
+            float: left;
+        }
+
+        /* 图片五列 */
+        .col-5 {
+            width: 20%;
+            float: left;
+        }
+
+        .img-content {
+            width: 90%;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .figureitem {
+            display: block;
+            overflow: hidden;
+            padding: 0.3%;
+            margin: 0;
+            transition: left 1s, top 1s;
+        }
+
+        .figureitem img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+        }
+
+        .figureitem:hover img {
+            /* 这里写图片的鼠标经过事件 */
+        }
+
+        @keyframes figureitem_img {
+            0% {
+                transform: scale(1);
+            }
+
+            100% {
+                transform: scale(1.2);
+            }
+        }
+
+
+        .catalog {
+            display: inline-flex;
+            margin-left: 3rem;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        .catalog li {
+            margin: 1rem 2rem;
+        }
+
+        .catalog a {
+            font-family: "仿宋";
+            font-size: 18px;
+            font-weight: bold;
+            color: rgb(77, 77, 77);
+            text-decoration: none;
+        }
+        .content {
+	    background: url("./img/gallery/d667b036a878f828038d0eacc6cca684.jpg");
+	    height: 30vh;
+	    padding: 0;
+	    background-repeat: no-repeat;
+	    background-attachment: fixed;
+	    background-size: cover;
+	    z-index: -1;
+	    background-position: bottom;
+    }
+    .img_qie{
+        display: inline-block;
+    position: absolute;
+    right: 8rem;
+    margin-top: 1rem;
+    }
+    .img3_qie{
+        font-size: 23px;
+        color:rgb(165 162 162);
+    }
+    .img5_qie{
+        font-size: 24px;
+        color:rgb(165 162 162);
+    }
+    .img5_qie:hover,.img3_qie:hover{
+        color:orange;
+        transition:color .3s;
+    }
+    </style>
+</head>
+
+<body>
+    <!-- 主体 -->
+
+    <div class="container-fluid">
+        <section class="content">
+            <p class="content_title">画廊</p>
+            <!-- 主体 -->
+            <div class="row mg0">
+                <!-- 左边 -->
+                <div class="col-md-3 col-sm-3 col-xs-0 pd0 userdom">
+                    <div class="userimg"></div>
+                    <h3>努力学习</h3>
+                    <!-- 菜单 -->
+                    <ul class="nav_ul">
+                        <li><a href="content.html" style="background-image: url(./img/4.png);" ><span>首页</span></a></li>
+                        <li><a href="#" style="background-image: url(./img/8.png);" ><span>归档</span></a></li>
+                        <li><a href="gallery.html" style="background-image: url(./img/10.png);" ><span>画廊</span></a></li>
+                        <li><a href="messageBoard.html" style="background-image: url(./img/2.png);" ><span>留言板</span></a></li>
+                        <li><a href="about.html" style="background-image: url(./img/7.png);" ><span>关于</span></a></li>
+                    </ul>
+                    <!-- 主题 -->
+                    <div class="zhuti">
+                        <i class="xuanzhuan iconfont icon-shezhi"></i>
+                        <ul class="zhutiul">
+                            <li onclick="Themeclick(0)"><img src="./img/background_img/theme1_icon.png" style="width: 30px;"></li>
+                            <li onclick="Themeclick(1)"><img src="./img/background_img/theme2_icon.png" style="width: 30px;"></li>
+                            <li onclick="Themeclick(2)"><img src="./img/background_img/theme3_icon.png" style="width: 30px;"></li>
+                        </ul>
+                    </div>
+                    
+                   
+                    
+
+                    <ul class="user_ul">
+                        <li><img src="img/icon/B站.png"></li>
+                        <li><img src="img/icon/QQ.png"></li>
+                        <li><img src="img/icon/weibo.png"></li>
+                        <li><img src="img/icon/jianshu.png"></li>
+                        <li><img src="img/icon/zhihu.png"></li>
+                    </ul>
+                    <footer class="col-md-12 col-sm-12 col-xs-0 footerdom">
+                        <span style="color:#ff0000">©</span>
+                        <span style="color:#ca7900">2</span>
+                        <span style="color:#48ab18">0</span>
+                        <span style="color:#2720ac">2</span>
+                        <span style="color:#9b17ae">0</span>
+                        <span style="color:#ff0000">广</span>
+                        <span style="color:#ca7900">西</span>
+                        <span style="color:#48ab18">科</span>
+                        <span style="color:#2720ac">技</span>
+                        <span style="color:#f40428">师</span>
+                        <span style="color:#ca7900">范</span>
+                        <span style="color:#48ab18">学</span>
+                        <span style="color:#2720ac">院</span>
+                        <span style="color:#f40428">-</span>
+                        <span style="color:#ca7900">李</span>
+                        <span style="color:#48ab18">祥</span>
+                        <span style="color:#2720ac">建</span>
+                    </footer>
+                </div>
+                <!-- 右边 -->
+                <div class="col-md-9 col-sm-9 col-xs-12 pd0 contentdom">
+                    <nav>
+                        <ul class="catalog">
+                            <li><a>全部</a></li>
+                            <li><a>动漫</a></li>
+                            <li><a>鬼刀</a></li>
+                            <li><a>插画</a></li>
+                            <li><a>风景</a></li>
+                        </ul>
+                        <div class="img_qie">
+                             <span onclick="colNumber(3)"> <i class=" iconfont icon-xinsi img3_qie"></i> </span>
+                        <span onclick="colNumber(5)"> <i class=" iconfont icon-fangkuai img5_qie"></i>  </span>
+                        </div>
+                       
+                    </nav>
+                    <article class="img-content">
+                        <figure class="col-3 figureitem ">
+                            <img src="./img/gallery/109951163101761660.md.png" alt="">
+                        </figure>
+                        <figure class="col-3 figureitem">
+                            <img src="./img/gallery/18623527953015605.md.png" alt="">
+                        </figure>
+                        <figure class="col-3 figureitem">
+                            <img src="./img/gallery/354bc4457b33051bac610341c3f44549.md.jpg" alt="">
+                        </figure>
+                        <figure class="col-3 figureitem ">
+                            <img src="https://cdn.lixingyong.com/2020/07/17/9f2fa637696f4827e1a8c7d7836d1550.md.jpg"
+                                alt="">
+                        </figure>
+                        <figure class="col-3 figureitem">
+                            <img src="./img/gallery/18623527953015605.md.png" alt="">
+                        </figure>
+                        <figure class="col-3 figureitem">
+                            <img src="./img/gallery/354bc4457b33051bac610341c3f44549.md.jpg" alt="">
+                        </figure>
+                        <figure class="col-3 figureitem">
+                            <img src="./img/gallery/eac97a5aa0935e8d9e991ba03765124d.md.jpg" alt="">
+                        </figure>
+                        <figure class="col-3 figureitem">
+                            <img src="./img/gallery/f24e30fb0b1c77abf0f789de9374314a.md.png" alt="">
+                        </figure>
+                        <figure class="col-3 figureitem">
+                            <img src="./img/gallery/坠落天使.jpg" alt="">
+                        </figure>
+                        <figure class="col-3 figureitem">
+                            <img src="./img/gallery/eac97a5aa0935e8d9e991ba03765124d.md.jpg" alt="">
+                        </figure>
+                        <figure class="col-3 figureitem">
+                            <img src="./img/gallery/f24e30fb0b1c77abf0f789de9374314a.md.png" alt="">
+                        </figure>
+                        <figure class="col-3 figureitem">
+                            <img src="./img/gallery/坠落天使.jpg" alt="">
+                        </figure>
+                        <figure class="col-3 figureitem ">
+                            <img src="./img/gallery/109951163101761660.md.png" alt="">
+                        </figure>
+                        <figure class="col-3 figureitem">
+                            <img src="./img/gallery/18623527953015605.md.png" alt="">
+                        </figure>
+                        <figure class="col-3 figureitem">
+                            <img src="./img/gallery/354bc4457b33051bac610341c3f44549.md.jpg" alt="">
+                        </figure>
+                        <figure class="col-3 figureitem">
+                            <img src="./img/gallery/eac97a5aa0935e8d9e991ba03765124d.md.jpg" alt="">
+                        </figure>
+                        <figure class="col-3 figureitem">
+                            <img src="./img/gallery/f24e30fb0b1c77abf0f789de9374314a.md.png" alt="">
+                        </figure>
+                        <figure class="col-3 figureitem">
+                            <img src="./img/gallery/坠落天使.jpg" alt="">
+                        </figure>
+                    </article>
+                </div>
+            </div>
+
+            <!-- 返回顶部 -->
+            <a onclick="pageScroll()" class="back-to-top"></a>
+        </section>
+        <!-- 看板娘 -->
+        <div class="waifu">
+            <div class="waifu-tips"></div>
+            <canvas id="live2d" class="live2d"></canvas>
+            <div class="waifu-tool">
+                <span class="fui-home"></span>
+                <span class="fui-chat"></span>
+                <span class="fui-eye"></span>
+                <span class="fui-user"></span>
+                <span class="fui-photo"></span>
+                <span class="fui-info-circle"></span>
+                <span class="fui-cross"></span>
+            </div>
+        </div>
+
+    </div>
+    <!-- waifu-tips.js 依赖 JQuery 库 -->
+    <script src="./modules/live2d/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+
+    <!--(看板娘) 实现拖动效果，需引入 JQuery UI -->
+    <script src="./modules/live2d/jquery-ui.min.js"></script>
+    <script src="./modules/live2d/waifu-tips.js"></script>
+    <script src="./modules/live2d/live2d.min.js"></script>
+  <!-- 公共类 -->
+  <script src="./js/common.js"></script>
+    <!-- 瀑布流 -->
+    <script src="./js/waterfallFlow.js"></script>
+    <script type="text/javascript">
+        /* 可直接修改部分参数 */
+        live2d_settings['modelId'] = 1; // 默认模型 ID
+        live2d_settings['modelTexturesId'] = 39; // 默认材质 ID
+        live2d_settings['modelStorage'] = false; // 不储存模型 ID
+        live2d_settings['canCloseLive2d'] = false; // 隐藏 关闭看板娘 按钮
+        live2d_settings['canTurnToHomePage'] = true; // 隐藏 返回首页 按钮
+        live2d_settings['waifuSize'] = '300x235'; // 看板娘大小
+        live2d_settings['waifuTipsSize'] = '300x50'; // 提示框大小
+        live2d_settings['waifuFontSize'] = '16px'; // 提示框字体
+        live2d_settings['waifuToolFont'] = '20px'; // 工具栏字体
+        live2d_settings['waifuToolLine'] = '30px'; // 工具栏行高
+        live2d_settings['waifuToolTop'] = '-50px'; // 工具栏顶部边距
+        live2d_settings['waifuDraggable'] = 'axis-x'; // 拖拽样式
+        live2d_settings['waifuEdgeSide'] = 'left:450'; // 看板娘贴边方向，例如 'left:0'(靠左 0px), 'right:30'(靠右 30px)
+        /* 在 initModel 前添加 */
+        initModel("./modules/live2d/waifu-tips.json?v=1.4.2");
+
+    </script>
+</body>
+
+</html>

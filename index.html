@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width,height=device-height, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+		<title>博客</title>
+		<link rel="icon" href="./img/favicon2.ico">
+		<!-- Bootstrap -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+		<!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+		<!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+		<!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+		<style type="text/css">
+			*,
+			h1,
+			h2,
+			h3,
+			h4,
+			h5,
+			.container-fluid {
+				padding: 0;
+				margin: 0;
+			}
+
+			.container-fluid {
+				height: 100vh;
+			}
+
+			.content {
+				animation:myfirst 1s;
+				background: url("./img/img1.jpg");
+				background-size: 100% 100%;
+				height: inherit;
+				padding: 0;
+				background-repeat: no-repeat;
+				background-attachment: fixed;
+				background-size: cover;
+				z-index: -1;
+				background-position: center center;
+			}
+
+			.glitch {
+				color: white;
+				font-weight: bolder;
+				padding: 2rem;
+			}
+
+			.focusinfo {
+				position: relative;
+				max-width: 800px;
+				padding: 0 10px;
+				top: 40%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				-webkit-transform: translate(-50%, -50%);
+				text-align: center;
+				color: #eaeadf;
+				z-index: 99;
+				transition: .4s ease all;
+			}
+
+			.header-info {
+				width: 63%;
+				margin: auto;
+				font-size: 16px;
+				background: rgba(0, 0, 0, .5);
+				padding: 15px;
+				letter-spacing: 0;
+				line-height: 30px;
+				border-radius: 10px;
+				box-sizing: initial;
+				white-space: nowrap;
+			}
+
+			@keyframes myfirst {
+				from {
+					margin-top: -50px
+				}
+
+				to {
+					margin-top: 0
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- 主体 -->
+
+		<div class="container-fluid">
+			<section class="content">
+				<div class="focusinfo">
+					<h1 class="glitch" title="欢迎来到我的主页">欢迎来到我的博客</h1>
+					<div class="header-info">
+						<p>大三学生一枚，</br>博客系统还不是很完善，</br>在别的平台写的文章会陆续收录进来。</p>
+					</div>
+				</div>
+			</section>
+		</div>
+		<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+	</body>
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport"
+        content="width=device-width,height=device-height, initial-scale=1.0, minimum-scale=0.5, maximum-scale=2.0, user-scalable=yes" />
+    <title>林子的个人博客</title>
+    <link rel="icon" href="./img/favicon2.ico">
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+	<![endif]-->
+
+    <link rel="stylesheet" href="./css/content.css">
+    <!-- 看板娘css -->
+    <link rel="stylesheet" type="text/css" href="./modules/live2d/waifu.css" />
+
+</head>
+
+<body>
+    <!-- 主体 -->
+
+    <div class="container-fluid">
+        <section class="content">
+            <!-- <div class="focusinfo">
+					<h1 class="glitch" title="欢迎来到我的主页">欢迎来到我的主页</h1>
+				</div> -->
+            <!-- 主体 -->
+            <div class="row mg0">
+                <!-- 左边 -->
+                <div class="col-md-3 col-sm-3 col-xs-0 pd0 userdom">
+                    <div class="userimg"></div>
+                    <h3>努力学习</h3>
+                    <!-- 菜单 -->
+                    <ul class="nav_ul">
+                        <li><a href="content.html" style="background-image: url(./img/4.png);"><span>首页</span></a></li>
+                        <li><a href="#" style="background-image: url(./img/8.png);"><span>归档</span></a></li>
+                        <li><a href="gallery.html" style="background-image: url(./img/10.png);"><span>画廊</span></a></li>
+                        <li><a href="messageBoard.html" style="background-image: url(./img/2.png);"><span>留言板</span></a>
+                        </li>
+                        <li><a href="about.html" style="background-image: url(./img/7.png);"><span>关于</span></a></li>
+                    </ul>
+
+                    <!-- 主题 -->
+                    <div class="zhuti">
+                        <i class="xuanzhuan iconfont icon-shezhi"></i>
+                        <ul class="zhutiul">
+                            <li onclick="Themeclick(0)"><img src="./img/background_img/theme1_icon.png"
+                                    style="width: 30px;"></li>
+                            <li onclick="Themeclick(1)"><img src="./img/background_img/theme2_icon.png"
+                                    style="width: 30px;"></li>
+                            <li onclick="Themeclick(2)"><img src="./img/background_img/theme3_icon.png"
+                                    style="width: 30px;"></li>
+                        </ul>
+                    </div>
+
+
+
+
+                    <ul class="user_ul">
+                        <li><a
+                                href="https://space.bilibili.com/401812371?spm_id_from=333.33.b_73656375726974794f75744c696e6b.1"><img
+                                    src="img/icon/B站.png"></a></li>
+                        <li><a href=""><img src="img/icon/QQ.png"></a></li>
+                        <li><a href=""><img src="img/icon/weibo.png"></a></li>
+                        <li><a href="https://www.jianshu.com/u/3be9323f7ce7"><img src="img/icon/jianshu.png"></a></li>
+                        <li><a href="zhihu.com/people/shishezhang"><img src="img/icon/zhihu.png"></a></li>
+                    </ul>
+                    <footer class="col-md-12 col-sm-12 col-xs-0 footerdom">
+                        <span style="color:#ff0000">©</span>
+                        <span style="color:#ca7900">2</span>
+                        <span style="color:#48ab18">0</span>
+                        <span style="color:#2720ac">2</span>
+                        <span style="color:#9b17ae">0</span>
+                        <span style="color:#ff0000">广</span>
+                        <span style="color:#ca7900">西</span>
+                        <span style="color:#48ab18">科</span>
+                        <span style="color:#2720ac">技</span>
+                        <span style="color:#f40428">师</span>
+                        <span style="color:#ca7900">范</span>
+                        <span style="color:#48ab18">学</span>
+                        <span style="color:#2720ac">院</span>
+                        <span style="color:#f40428">-</span>
+                        <span style="color:#ca7900">李</span>
+                        <span style="color:#48ab18">祥</span>
+                        <span style="color:#2720ac">建</span>
+                    </footer>
+                </div>
+                <!-- 右边 -->
+                <div class="col-md-9 col-sm-9 col-xs-12 pd0 contentdom">
+                    <div id="blogsList">
+                        <!-- 图片左 -->
+                        <article class="row articlelist ">
+                            <div class="col-md-7 col-sm-7 col-xs-12 pd0">
+                                <div class="rowimg_left">
+                                    <a href="#">
+                                        <img src="./img/img1.jpg">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-5 col-sm-5 col-xs-12 pd0">
+                                <div class="post-content">
+                                    <div class="content-date">
+                                        <i class=" iconfont icon-shijian"></i>发布于 2020-06-08
+                                    </div>
+                                    <a href="#" class="content-title">
+                                        <h3>Quartz 注入 Spring Bean为空</h3>
+                                    </a>
+                                    <div class="content-meta">
+                                        <span> <i class=" iconfont icon-zuihuo colorred"></i>399 热度</span>
+                                    </div>
+                                    <div class="float-content">
+                                        <p>问题描述项目中采用了Quartz来执行调度任务，但在Quartz自动调用Job任务时，发现在JobBean中使用@Autowired进行依赖注入会产生null指针错误经查阅资料得知，大致原因为Job由Quartz实例化创建，因而在Job中使用依赖注入时无法找到Spring的Bean开发所使用的版本号
+                                        </p>
+                                    </div>
+                                    <div class="content-bottom">
+                                        <i class=" iconfont icon-gengduo gd-icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- 图片右 -->
+                        <article class="row articlelist">
+                            <div class="col-md-5 col-sm-5 col-xs-12 pd0">
+                                <div class="post-content">
+                                    <div class="content-date">
+                                        <i class=" iconfont icon-shijian"></i>发布于 2020-06-08
+                                    </div>
+                                    <a href="#" class="content-title">
+                                        <h3>Quartz 注入 Spring Bean为空</h3>
+                                    </a>
+                                    <div class="content-meta">
+                                        <span> <i class=" iconfont icon-zuihuo colorred"></i>399 热度</span>
+                                    </div>
+                                    <div class="float-content">
+                                        <p>问题描述项目中采用了Quartz来执行调度任务，但在Quartz自动调用Job任务时，发现在JobBean中使用@Autowired进行依赖注入会产生null指针错误经查阅资料得知，大致原因为Job由Quartz实例化创建，因而在Job中使用依赖注入时无法找到Spring的Bean开发所使用的版本号
+                                        </p>
+                                    </div>
+                                    <div class="content-bottom">
+                                        <i class=" iconfont icon-gengduo gd-icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-7 col-sm-7 col-xs-12 pd0">
+                                <div class="rowimg_right">
+                                    <a href="#">
+                                        <img src="./img/img1.jpg">
+                                    </a>
+                                </div>
+                            </div>
+                        </article>
+                        <!-- 加载更多 -->
+                        <div class="gengduo">
+                            <button>加载更多</button>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+
+            <!-- 返回顶部 -->
+            <a onclick="pageScroll()" class="back-to-top"></a>
+        </section>
+        <!-- 看板娘 -->
+        <div class="waifu">
+            <div class="waifu-tips"></div>
+            <canvas id="live2d" class="live2d"></canvas>
+            <div class="waifu-tool">
+                <span class="fui-home"></span>
+                <span class="fui-chat"></span>
+                <span class="fui-eye"></span>
+                <span class="fui-user"></span>
+                <span class="fui-photo"></span>
+                <span class="fui-info-circle"></span>
+                <span class="fui-cross"></span>
+            </div>
+        </div>
+
+    </div>
+    <!-- waifu-tips.js 依赖 JQuery 库 -->
+    <script src="./modules/live2d/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+
+    <!-- 实现拖动效果，需引入 JQuery UI -->
+    <script src="./modules/live2d/jquery-ui.min.js"></script>
+
+    <script src="./modules/live2d/waifu-tips.js"></script>
+    <script src="./modules/live2d/live2d.min.js"></script>
+
+    <!-- 公共类 -->
+    <script src="./js/common.js"></script>
+
+    <script type="text/javascript">
+        /* 可直接修改部分参数 */
+        live2d_settings['modelId'] = 1; // 默认模型 ID
+        live2d_settings['modelTexturesId'] = 39; // 默认材质 ID
+        live2d_settings['modelStorage'] = false; // 不储存模型 ID
+        live2d_settings['canCloseLive2d'] = false; // 隐藏 关闭看板娘 按钮
+        live2d_settings['canTurnToHomePage'] = true; // 隐藏 返回首页 按钮
+        live2d_settings['waifuSize'] = '300x235'; // 看板娘大小
+        live2d_settings['waifuTipsSize'] = '300x50'; // 提示框大小
+        live2d_settings['waifuFontSize'] = '16px'; // 提示框字体
+        live2d_settings['waifuToolFont'] = '20px'; // 工具栏字体
+        live2d_settings['waifuToolLine'] = '30px'; // 工具栏行高
+        live2d_settings['waifuToolTop'] = '-50px'; // 工具栏顶部边距
+        live2d_settings['waifuDraggable'] = 'axis-x'; // 拖拽样式
+        live2d_settings['waifuEdgeSide'] = 'left:450'; // 看板娘贴边方向，例如 'left:0'(靠左 0px), 'right:30'(靠右 30px)
+        /* 在 initModel 前添加 */
+        initModel("./modules/live2d/waifu-tips.json?v=1.4.2");
+
+
+
+
+
+        //打开文章
+        $(document).on("click", ".articlelist", function () {
+            location.href = 'article.html?blogId=' + this.dataset.id;
+        });
+
+
+        $(function () {
+            // 请求文章
+            $.ajax({
+                url: getHost() + "web/blogs/list",
+                method: "get",
+                dataType: 'JSON',
+                data: {
+                    limit: 10,
+                    page: 1
+                },
+                success: function (res) {
+                    if (res.resultCode == 200) {
+                        var data = res.data.list;
+                        var html = "";
+                        for (var i = 0; i < data.length; i++) {
+                            if (i % 2 == 0) {
+                                html += `<article class="row articlelist " data-id="${data[i].blogId}" onclick="openarticle();">
+                            <div class="col-md-7 col-sm-7 col-xs-12 pd0">
+                                <div class="rowimg_left">
+                                    <a>
+                                        <img src="${data[i].blogCoverImage}">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="col-md-5 col-sm-5 col-xs-12 pd0">
+                                <div class="post-content">
+                                    <div class="content-date">
+                                        <i class=" iconfont icon-shijian"></i>发布于 ${data[i].createTime}
+                                    </div>
+                                    <a class="content-title">
+                                        <h3>${data[i].blogTitle}</h3>
+                                    </a>
+                                    <div class="content-meta">
+                                        <span> <i class=" iconfont icon-zuihuo colorred"></i>399 热度</span>
+                                    </div>
+                                    <div class="float-content">
+                                        <p>问题描述项目中采用了Quartz来执行调度任务，但在Quartz自动调用Job任务时，发现在JobBean中使用@Autowired进行依赖注入会产生null指针错误经查阅资料得知，大致原因为Job由Quartz实例化创建，因而在Job中使用依赖注入时无法找到Spring的Bean开发所使用的版本号
+                                        </p>
+                                    </div>
+                                    <div class="content-bottom">
+                                        <i class=" iconfont icon-gengduo gd-icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>`
+                            } else {
+                                html += `<article class="row articlelist" data-id="${data[i].blogId}" onclick="openarticle();">
+                            <div class="col-md-5 col-sm-5 col-xs-12 pd0">
+                                <div class="post-content">
+                                    <div class="content-date">
+                                        <i class=" iconfont icon-shijian"></i>发布于 ${data[i].createTime}
+                                    </div>
+                                    <a class="content-title">
+                                        <h3>${data[i].blogTitle}</h3>
+                                    </a>
+                                    <div class="content-meta">
+                                        <span> <i class=" iconfont icon-zuihuo colorred"></i>399 热度</span>
+                                    </div>
+                                    <div class="float-content">
+                                        <p>问题描述项目中采用了Quartz来执行调度任务，但在Quartz自动调用Job任务时，发现在JobBean中使用@Autowired进行依赖注入会产生null指针错误经查阅资料得知，大致原因为Job由Quartz实例化创建，因而在Job中使用依赖注入时无法找到Spring的Bean开发所使用的版本号
+                                        </p>
+                                    </div>
+                                    <div class="content-bottom">
+                                        <i class=" iconfont icon-gengduo gd-icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-7 col-sm-7 col-xs-12 pd0">
+                                <div class="rowimg_right">
+                                    <a>
+                                        <img src="${data[i].blogCoverImage}">
+                                    </a>
+                                </div>
+                            </div>
+                        </article>`
+                            }
+                        }
+                        $("#blogsList").html(html);
+                    }
+                },
+                error: function (err) {
+                    alert("服务器错误");
+                }
+            });
+        })
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>
